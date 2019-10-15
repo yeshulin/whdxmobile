@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>武汉大学新闻传播</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/index.css">
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header>
+			<div class="whdx_logo">
+				<img src="../img/whdx_logo.png" alt="">
+				<a class="home_logo" href="home.html">
+					<img src="../img/home.png" alt="">
+				</a>
+			</div>
+		</header>
+		<!-- 内容区 -->
+		<div class="whdx_content">
+			<!-- 导航区 -->
+			<div class="whdx_nav">
+				<ul>
+					<li><a href="infoListNews.html" class="active">最新动态</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="infoListCenter.html">中心介绍</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="infoListTeach.html">实验教学</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">实践创新</a></li>
+				</ul>
+				<ul>
+					<li><a href="infoListCase.html">成果展示</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">示范辐射</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">线上实验</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">帮助中心</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="whdx_bg"></div>
+		<!-- 主内容区 -->
+		<div class="whdx_content_wrap">
+			<!-- 信息列表 -->
+			<div class="whdx_tab">
+				<ul>
+					<li class="active">
+						<a href="#">新闻学</a>
+						<div class="bottom_bar"></div>
+					</li>
+					<li><a href="#">广播电视学</a>
+						<div class="bottom_bar"></div>
+					</li>
+					<li><a href="#">广告学</a>
+						<div class="bottom_bar"></div>
+					</li>
+					<li><a href="#">传媒学</a>
+						<div class="bottom_bar"></div>
+					</li>
+					<li><a href="#">传媒学</a>
+						<div class="bottom_bar"></div>
+					</li>
+				</ul>
+			</div>
+			<div class="whdx_tab_content">
+				<div class="whdx_tab_entryList" id="infoList">
+					<div class="mui-row">
+						<div class="mui-col-sm-6 mui-col-xs-6">
+							<div class="mui-table-view-cell">
+								<a href="article.html" class="entry_block">
+									<div class="entry_wrap">
+										<div class="entry_img">
+											<img src="../img/entry.png" alt="">
+										</div>
+										<p class="entryList_info">新闻与传播学实验课...</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="mui-col-sm-6 mui-col-xs-6">
+							<div class="mui-table-view-cell">
+								<a href="article.html" class="entry_block">
+									<div class="entry_wrap">
+										<div class="entry_img">
+											<img src="../img/entry.png" alt="">
+										</div>
+										<p class="entryList_info">数控编程加工应用编...</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="mui-col-sm-6 mui-col-xs-6">
+							<div class="mui-table-view-cell">
+								<a href="article.html" class="entry_block">
+									<div class="entry_wrap">
+										<div class="entry_img">
+											<img src="../img/entry.png" alt="">
+										</div>
+										<p class="entryList_info">新闻传播专业课程</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="mui-col-sm-6 mui-col-xs-6">
+							<div class="mui-table-view-cell">
+								<a href="article.html" class="entry_block">
+									<div class="entry_wrap">
+										<div class="entry_img">
+											<img src="../img/entry.png" alt="">
+										</div>
+										<p class="entryList_info">新闻与传播学实验课...</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="mui-col-sm-6 mui-col-xs-6">
+							<div class="mui-table-view-cell">
+								<a href="article.html" class="entry_block">
+									<div class="entry_wrap">
+										<div class="entry_img">
+											<img src="../img/entry.png" alt="">
+										</div>
+										<p class="entryList_info">新闻与传播学实验课...</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="mui-col-sm-6 mui-col-xs-6">
+							<div class="mui-table-view-cell">
+								<a href="article.html" class="entry_block">
+									<div class="entry_wrap">
+										<div class="entry_img">
+											<img src="../img/entry.png" alt="">
+										</div>
+										<p class="entryList_info">新闻与传播学实验课...</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="whdx_pulldown">
+					<span><img src="../img/pulldown.png" alt="">下滑加载更多</span>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/init.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#infoList", //待刷新区域标识，querySelector能定位的css选择器
+					up: {
+						height: 50, //可选.默认50.触发上拉加载拖动距离
+						//auto:true,//可选,默认false.自动上拉加载一次
+						contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+						contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: function() { //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+
+							// if(res.data === null){
+
+							//  this.endPullupToRefresh(true);
+							//  //隐藏下拉提示
+							//  var fixedBar = document.getElementsByClassName("whdx_pulldown");
+							//  fixedBar.style.display = "none";
+							// }
+							this.endPullupToRefresh(false);
+							// mui('#infoList').pullRefresh().disablePullupToRefresh();
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>武汉大学新闻传播</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/index.css">
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header>
+			<div class="whdx_logo">
+				<img src="../img/whdx_logo.png" alt="">
+				<a class="home_logo" href="home.html">
+					<img src="../img/home.png" alt="">
+				</a>
+			</div>
+		</header>
+		<!-- 内容区 -->
+		<div class="whdx_content">
+			<!-- 导航区 -->
+			<div class="whdx_nav">
+				<ul>
+					<li><a href="infoListNews.html">最新动态</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="" class="active">中心介绍</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="infoListTeach.html">实验教学</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">实践创新</a></li>
+				</ul>
+				<ul>
+					<li><a href="infoListCase.html">成果展示</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">示范辐射</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">线上实验</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">帮助中心</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="whdx_bg"></div>
+		<!-- 主内容区 -->
+		<div class="whdx_content_wrap">
+			<!-- 信息列表 -->
+			<div class="whdx_tab">
+				<ul>
+					<li class="active">
+						<a href="#">中心日历</a>
+						<div class="bottom_bar"></div>
+					</li>
+					<li>
+						<a href="#">中心日历</a>
+						<div class="bottom_bar"></div>
+					</li>
+				</ul>
+			</div>
+			<div class="whdx_tab_content" id="infoList">
+				<!-- 中心日历 -->
+				<div class="whdx_card whdx_item_init">
+					<div class="whdx_card_body">
+						<a class="card_list_item top3">
+							<div class="date"><span>09-10</span></div>
+							<div class="info">实验中心设备管理暂行办法</div>
+						</a>
+						<a class="card_list_item top3">
+							<div class="date"><span>09-10</span></div>
+							<div class="info">实验中心设备管理暂行办法</div>
+						</a>
+						<a class="card_list_item top3">
+							<div class="date"><span>09-10</span></div>
+							<div class="info">实验中心设备管理暂行办法</div>
+						</a>
+						<a class="card_list_item">
+							<div class="date"><span>09-10</span></div>
+							<div class="info">实验中心设备管理暂行办法</div>
+						</a><a class="card_list_item">
+							<div class="date"><span>09-10</span></div>
+							<div class="info">实验中心设备管理暂行办法</div>
+						</a>
+						<a class="card_list_item">
+							<div class="date"><span>09-10</span></div>
+							<div class="info">实验中心设备管理暂行办法</div>
+						</a>
+						<a class="card_list_item">
+							<div class="date"><span>09-10</span></div>
+							<div class="info">实验中心设备管理暂行办法</div>
+						</a>
+					</div>
+				</div>
+				<div class="whdx_pulldown">
+					<span><img src="../img/pulldown.png" alt="">下滑加载更多</span>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/init.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#infoList", //待刷新区域标识，querySelector能定位的css选择器
+					up: {
+						height: 50, //可选.默认50.触发上拉加载拖动距离
+						//auto:true,//可选,默认false.自动上拉加载一次
+						contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+						contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: function() { //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+
+							// if(res.data === null){
+
+							//  this.endPullupToRefresh(true);
+							//  //隐藏下拉提示
+							//  var fixedBar = document.getElementsByClassName("whdx_pulldown");
+							//  fixedBar.style.display = "none";
+							// }
+							this.endPullupToRefresh(false);
+							// mui('#infoList').pullRefresh().disablePullupToRefresh();
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

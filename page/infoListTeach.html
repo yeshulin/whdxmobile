@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<title>武汉大学新闻传播</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/index.css">
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header>
+			<div class="whdx_logo">
+				<img src="../img/whdx_logo.png" alt="">
+				<a class="home_logo" href="home.html">
+					<img src="../img/home.png" alt="">
+				</a>
+			</div>
+		</header>
+		<!-- 内容区 -->
+		<div class="whdx_content">
+			<!-- 导航区 -->
+			<div class="whdx_nav">
+				<ul>
+					<li><a href="infoListNews.html">最新动态</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="infoListCenter.html">中心介绍</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="" class="active">实验教学</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">实践创新</a></li>
+				</ul>
+				<ul>
+					<li><a href="infoListCase.html">成果展示</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">示范辐射</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">线上实验</a></li>
+					<li class="whdx_nav_rod"></li>
+					<li><a href="">帮助中心</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="whdx_bg"></div>
+		<!-- 主内容区 -->
+		<div class="whdx_content_wrap">
+			<!-- 信息列表 -->
+			<div class="whdx_tab">
+				<ul>
+					<!-- 循环 -->
+					<li class="active">
+						<a href="#">培养方案</a>
+						<div class="bottom_bar"></div>
+					</li>
+					<li><a href="#">教学大纲</a>
+						<div class="bottom_bar"></div>
+					</li>
+					<li><a href="#">教学计划</a>
+						<div class="bottom_bar"></div>
+					</li>
+					<li><a href="#">实验项目</a>
+						<div class="bottom_bar"></div>
+					</li>
+				</ul>
+			</div>
+			<div class="whdx_tab_content" id="infoList">
+				<div class="whdx_tab_article">
+					<!-- 文章数据 -->
+					珞珈新闻与传播论坛2019夏季学术报告会最新... 新闻与传播学院2019年优秀大学生暑期夏令营... 第二分党校第63期入党积极分子培训班开班典... 会议现场 | 影像与社会——首届中国视听艺术研... 无论离开多久
+					珞樱尽头有你——99届校友毕业... 喜讯！我院2008级校友周楠获“全国五一劳动奖... 丝路时空|今日美国传媒与文化政治 武汉大学新闻与传播学院2019年招聘公告 数字时代广告学专业建设研讨会”在我院成功举...
+					武汉大学新闻与传播学院2019年港澳台硕士研... 学院资料室新书通报（2019年第三期） 你们是我的艺术品,要用一生去品味欣赏——20... 纪念哲学社会科学工作座谈会召开三周年 我校... 从舞台到讲台
+					喜讯!我院2008级校友周楠获“全国五一劳动奖... 廿·珈——毕业返校20年
+				</div>
+				<div class="whdx_pulldown">
+					<span><img src="../img/pulldown.png" alt="">下滑加载更多</span>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/init.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#infoList", //待刷新区域标识，querySelector能定位的css选择器
+					up: {
+						height: 50, //可选.默认50.触发上拉加载拖动距离
+						//auto:true,//可选,默认false.自动上拉加载一次
+						contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+						contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: function() { //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+
+							// if(res.data === null){
+
+							//  this.endPullupToRefresh(true);
+							//  //隐藏下拉提示
+							//  var fixedBar = document.getElementsByClassName("whdx_pulldown");
+							//  fixedBar.style.display = "none";
+							// }
+							this.endPullupToRefresh(false);
+							// mui('#infoList').pullRefresh().disablePullupToRefresh();
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
